@@ -1,9 +1,11 @@
 androidApplication {
     namespace = "org.example.app"
 
+    // Enable Jetpack Compose using supported declarative key
     compose {
         enabled = true
-        composeCompilerExtension = "1.5.14"
+        // The declarative DSL does not use 'composeCompilerExtension'; it derives the compiler from toolchain.
+        // Keeping this block minimal avoids unresolved assignment target errors.
     }
 
     dependencies {
