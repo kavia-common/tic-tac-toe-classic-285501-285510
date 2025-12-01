@@ -23,5 +23,8 @@ androidApplication {
         // Lifecycle + ViewModel
         implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
         implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+
+        // Material Components (XML-backed themes like Theme.Material3.* for AAPT)
+        implementation("com.google.android.material:material:1.12.0")
     }
 }

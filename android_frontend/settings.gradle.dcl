@@ -26,6 +26,11 @@ defaults {
         applicationId = "org.gradle.experimental.android.app"
 
         testing {
+            // Do not fail the build if no tests are discovered for unit tests.
+            // This project has no unit tests in :app by design; integration/UI covered via manual runs.
+            // This setting applies to the JUnit Platform configuration used by the ecosystem plugin.
+            failOnNoDiscoveredTests = false
+
             dependencies {
                 implementation("org.junit.jupiter:junit-jupiter:5.10.2")
                 runtimeOnly("org.junit.platform:junit-platform-launcher")

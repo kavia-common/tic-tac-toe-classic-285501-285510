@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- App theme based on Material 3; colors/typography are driven by OceanTheme in Compose -->
-    <style name="AppTheme" parent="Theme.Material3">
-        <!-- Minimal: Compose content supplies its own color scheme -->
+    <!--
+        XML base theme used by the system before Compose content is rendered.
+        Use a concrete Material Components (MDC) M3 theme that exists as an XML resource.
+        Compose (OceanTheme) provides the color scheme for composables.
+    -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Keep minimal since Compose handles colors/typography -->
     </style>
 </resources>
