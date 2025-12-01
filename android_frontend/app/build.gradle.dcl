@@ -9,6 +9,14 @@ androidApplication {
         enabled = true
     }
 
+    testing {
+        // JUnit Platform dependencies for unit tests
+        dependencies {
+            implementation("org.junit.jupiter:junit-jupiter:5.10.2")
+            runtimeOnly("org.junit.platform:junit-platform-launcher")
+        }
+    }
+
     dependencies {
         // Core Compose UI
         implementation("androidx.activity:activity-compose:1.9.3")
@@ -24,7 +32,8 @@ androidApplication {
         implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
         implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
 
-        // Material Components (XML-backed themes like Theme.Material3.* for AAPT)
+        // Material Components provides XML themes (Theme.MaterialComponents.*).
+        // We use Theme.MaterialComponents.DayNight.NoActionBar in values/themes.xml to satisfy AAPT.
         implementation("com.google.android.material:material:1.12.0")
     }
 }

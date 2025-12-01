@@ -2,10 +2,10 @@
 <resources>
     <!--
         XML base theme used by the system before Compose content is rendered.
-        Use a concrete Material Components (MDC) M3 theme that exists as an XML resource.
+        Use a concrete Material Components (MDC) theme that is guaranteed to exist in XML.
         Compose (OceanTheme) provides the color scheme for composables.
     -->
-    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Keep minimal since Compose handles colors/typography -->
     </style>
 </resources>
