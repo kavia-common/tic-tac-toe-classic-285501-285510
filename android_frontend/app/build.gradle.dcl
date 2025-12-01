@@ -1,20 +1,23 @@
 androidApplication {
+    // This must match the package in Kotlin sources (.MainActivity) and Manifest.
     namespace = "org.example.app"
 
-    // Enable Jetpack Compose using supported declarative key
+    // Enable Jetpack Compose via the supported Declarative DSL.
+    // NOTE: org.gradle.experimental.android-ecosystem uses `compose { enabled = true }`.
+    // The key 'composeCompilerExtension' is NOT recognized; compiler extension is derived from toolchain.
     compose {
         enabled = true
-        // The declarative DSL does not use 'composeCompilerExtension'; it derives the compiler from toolchain.
-        // Keeping this block minimal avoids unresolved assignment target errors.
     }
 
     dependencies {
-        // Core Compose
+        // Core Compose UI
         implementation("androidx.activity:activity-compose:1.9.3")
         implementation("androidx.compose.ui:ui:1.7.5")
         implementation("androidx.compose.material3:material3:1.3.1")
         implementation("androidx.compose.ui:ui-tooling-preview:1.7.5")
         implementation("androidx.compose.material:material-icons-extended:1.7.5")
+
+        // Tooling - keep in main config due to declarative constraints
         implementation("androidx.compose.ui:ui-tooling:1.7.5")
 
         // Lifecycle + ViewModel

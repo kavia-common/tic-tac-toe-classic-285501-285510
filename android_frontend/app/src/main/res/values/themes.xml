@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- App theme based on Material3 DayNight -->
-    <style name="AppTheme" parent="Theme.Material3.DayNight">
-        <!-- Keep minimal; Compose provides colors/typography via OceanTheme -->
+    <!-- App theme based on Material 3; colors/typography are driven by OceanTheme in Compose -->
+    <style name="AppTheme" parent="Theme.Material3">
+        <!-- Minimal: Compose content supplies its own color scheme -->
     </style>
 </resources>
